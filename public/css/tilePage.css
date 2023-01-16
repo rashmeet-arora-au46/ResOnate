@@ -1,0 +1,43 @@
+html {
+    font-size: 22px;
+}
+
+body {
+    padding: 1rem;
+    background-image: url("./images/bg-masthead.jpg");
+}
+
+.card {
+    background-color: rgb(249, 249, 249);
+    color: rgb(0, 0, 0);
+    padding: 3rem;
+    margin: 3px;
+    height: 300px;
+    width: 500px;
+    border-radius: 25px;
+}
+
+.cards {
+    width: 900px;
+    height: 900px;
+    margin: 0 auto;
+    display: grid;
+    display: flex;
+    align-items: center;
+    text-align: top;
+    justify-content: center;
+    gap: 1rem;
+    grid-template-columns: repeat( auto-fit, minmax(2000px, 2000px));
+}
+
+i {
+    color: black;
+    font-size: 2.5rem;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: navy;
+    padding-top: 3%;
+    font-weight: 600;
+}

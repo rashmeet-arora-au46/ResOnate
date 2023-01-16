@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<!--add form tags-->
+
+<head>
+    <title>User Details</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/webpage_1.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>My Details
+        </h1>
+        <div class="row">
+            <div class="container-fluid">
+                <p>
+                    <button class="btn btn-light btn-block btn-lg" type="button" data-toggle="collapse" data-target="#education" aria-expanded="false" aria-controls="collapseWidthExample">
+                      Educational Qualifications
+                    </button>
+
+                </p>
+                <div class="container-fluid">
+                    <div class="collapse width" name="education" id="education">
+                        <div class="card-body">
+                            <i class="fa-solid fa-square-plus"></i>
+                            <small class="text-muted">Please enter at least 1 educational qualification.</small>
+                            <br />
+                            <form action="/education/<%= email%>" method="post">
+
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="institution">Institution Name</label>
+                                            <input type="text" name="institution" class="form-control" id="institution" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="courseName">Course</label>
+                                            <input type="text" name="course" class="form-control" id="courseName" required>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="startDate">Start Date</label>
+                                            <input type="date" name="startDate" class="form-control" id="startDate" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="endDate">End Date</label>
+                                            <input type="date" name="endDate" class="form-control" id="endDate" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        <div class="form-group">
+                                            <label for="grades">Grades</label>
+                                            <input type="number" name="grade" class="form-control" id="grades" required>
+                                            <small id="gradeHelp" class="form-text text-muted">Percentage of grade</small>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <button type="submit" class="btn btn-dark btn-block btn-lg">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---Work Experience-->
+        <div class="row">
+            <div class="container-fluid">
+                <p>
+                    <button class="btn btn-light btn-block btn-lg" type="button" data-toggle="collapse" data-target="#workexperience" aria-expanded="false" aria-controls="collapseWidthExample">
+                    Work Experiences
+                </button>
+                </p>
+                <div class="container-fluid">
+                    <div class="collapse width" name="workexperience" id="workexperience">
+                        <div class="card-body">
+                            <i class="fa-solid fa-square-plus"></i>
+                            <small class="text-muted">Please enter at least 1 Work Experience.</small>
+                            <br />
+                            <form action="/workexperience/<%= email%>" method="post">
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="companyName">Company Name</label>
+                                            <input type="text" class="form-control" id="companyName" name="companyName" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="workStartDate">Start Date</label>
+                                            <input type="date" class="form-control" name="workStartDate" id="workStartDate" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="workEndDate">End Date</label>
+                                            <input type="date" class="form-control" id="workEndDate" name="workEndDate" required>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label for="description">Description</label>
+                                            <input type="text" name="description" class="form-control" id="description" required>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <button type="submit" class="btn btn-dark btn-block btn-lg">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Certifications-->
+        <div class="row">
+            <div class="container-fluid">
+                <p>
+                    <button class="btn btn-light btn-block btn-lg" type="button" data-toggle="collapse" data-target="#certification" aria-expanded="false" aria-controls="collapseWidthExample">
+                      Certifications
+                    </button>
+                </p>
+                <div class="container-fluid">
+                    <div class="collapse width" name="certification" id="certification">
+                        <div class="card-body">
+                            <i class="fa-solid fa-square-plus"></i>
+                            <small class="text-muted">Please enter at least 1 certification.</small>
+                            <br />
+                            <form action="/certifications/<%= email%>" method="post">
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="certificationInstitution">Certification Institution Name</label>
+                                            <input type="text" class="form-control" id="certificationInstitution" name="certificationInstitution" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="certificationCourseName">Certification Course Name</label>
+                                            <input type="text" class="form-control" name="certificationCourseName" id="certificationCourseName" required>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="certificationStartDate">Certification Start Date</label>
+                                            <input type="date" class="form-control" name="certificationStartDate" id="certificationStartDate" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="certificationEndDate">Certification End Date</label>
+                                            <input type="date" class="form-control" name="certificationEndDate" id="certificationEndDate" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="certificationFile">Course Certificate</label>
+                                            <input type="file" class="form-control" name="certificationFile" id="certificationFile" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-dark btn-block btn-lg">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Languages & Key Skills-->
+        <div class="row">
+            <div class="container-fluid">
+                <p>
+                    <button class="btn btn-light btn-block btn-lg" type="button" data-toggle="collapse" data-target="#languages" aria-expanded="false" aria-controls="collapseWidthExample">
+                      Languages and Key Skills
+                    </button>
+                </p>
+                <div class="container-fluid">
+                    <div class="collapse width" name="languages" id="languages">
+                        <div class="card-body">
+                            <i class="fa-solid fa-square-plus"></i>
+                            <small class="text-muted">Please enter at least 1 language.</small>
+                            <br />
+                            <small class="text-muted">Please enter at least 1 skill.</small>
+                            <br />
+                            <form action="/languages/<%= email%>" method="post">
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="language">Language</label>
+                                            <input type="text" name="language" class="form-control" id="language" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="skill">Key Skills</label>
+                                            <input type="text" name="skill" class="form-control" id="skill" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-dark btn-block btn-lg">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---Social-->
+        <div class="row">
+            <div class="container-fluid">
+                <p>
+                    <button class="btn btn-light btn-block btn-lg" type="button" data-toggle="collapse" data-target="#social" aria-expanded="false" aria-controls="collapseWidthExample">
+                      Social
+                    </button>
+                </p>
+                <div class="container-fluid">
+                    <div class="collapse width" name="social" id="social">
+                        <div class="card-body">
+                            <i class="fa-solid fa-square-plus"></i>
+                            <form action="/social/<%= email%>" method="post">
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="linkedIn">LinkedIn</label>
+                                            <input type="text" name="linkedIn" class="form-control" id="linkedIn" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="facebook">Facebook</label>
+                                            <input type="text" name="facebook" class="form-control" id="facebook" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="github">GitHub</label>
+                                            <input type="text" name="github" class="form-control" id="github" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-dark btn-block btn-lg">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Project-->
+        <div class="row">
+            <div class="container-fluid">
+                <p>
+                    <button class="btn btn-light btn-block btn-lg" type="button" data-toggle="collapse" data-target="#project" aria-expanded="false" aria-controls="collapseWidthExample">
+                      Project
+                    </button>
+                </p>
+                <div class="container-fluid">
+                    <div class="collapse width" name="project" id="project">
+                        <div class="card-body">
+                            <i class="fa-solid fa-square-plus"></i>
+                            <form action="/project/<%= email%>" method="post">
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="projectTitle">Title</Title></label>
+                                            <input type="text" name="projectTitle" class="form-control" id="projectTitle" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="pDescription">description</label>
+                                            <input type="text" name="pDescription" class="form-control" id="pDescription" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="project_link">Project Link</label>
+                                            <input type="text" name="project_link" class="form-control" id="project_link" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-dark btn-block btn-lg">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!---last submit button-->
+        <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+</body>
+
+</html>

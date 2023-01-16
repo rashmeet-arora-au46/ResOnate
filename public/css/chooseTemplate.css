@@ -1,0 +1,20 @@
+body {
+    background-color: rgba(247, 194, 36, 0.881);
+}
+
+#temp1 {
+    background-image: url("./images/template1.png");
+}
+
+#temp2 {
+    background-image: url("./images/template2.png");
+}
+
+.card {
+    color: rgb(0, 0, 0);
+    padding: 3rem;
+    margin: 3px;
+    height: 300px;
+    width: 500px;
+    border-radius: 25px;
+}

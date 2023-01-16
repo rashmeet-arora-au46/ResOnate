@@ -1,0 +1,21 @@
+body {
+    background-image: url("./images/bg-callout.jpg");
+    background-size: cover;
+}
+
+.main-heading {
+    margin-top: 20%;
+}
+
+h1 {
+    font-size: 56px;
+    color: whitesmoke;
+    font-family: 'Monoton', cursive;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 500;
+    color: rgb(58, 52, 5);
+}
