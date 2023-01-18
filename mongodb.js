@@ -1,7 +1,7 @@
 const { text } = require('body-parser');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-mongoose.connect(process.env.mongoUrl, {dbName: "mydb"})
+const dotenv = require('dotenv')
+mongoose.connect(process.env.mongoUrl,{dbName:"mydb"})
 
 const educationSchema = new mongoose.Schema({
     startDate: Date,
